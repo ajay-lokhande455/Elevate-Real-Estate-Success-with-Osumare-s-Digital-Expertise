@@ -19,6 +19,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .contact-btn button {
     background-color: #fff;
     color: var(--secondary-color);
@@ -28,16 +29,38 @@ body {
     margin: 4vh 2vw;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
+
+.contact-btn button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.start-btn:hover {
+    background-color: #0056cc;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #0056cc, 0 0 30px #0056cc;
+}
+
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2vh 4vw;
-    height: 16vh;
+    padding: 1rem 4vw;
     background-color: white;
+    position: fixed;
+    top: 0;
+    height: 16vh;
+
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
 }
+
 
 .header-section {
     background-image: url('https://s3-alpha-sig.figma.com/img/f996/d0b6/1a1f447e69d2501a01940119aa42e5dd?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J32vX9aLTLU4aqK3pIhn~iJ-ehBCsiARlJsV2IxVnk1pGZ5ZbssWLNbL4JNIHqupbsDmkU3pYBT-g0KsL-96sgbdDRFQnSL-VcvxjwcyHn0PnfjMleacXzj10zMMV~kW5Zcn4bj8jLyBpesWLPIbsPCIiuq~IjA9jflr5CLCmv1-G1zuzB6lu2V0Ot~qWjSbCT8qf568e6tOq7m7EudYY38j12NW2NEQRRIgoDfXrjWm7dLILbtLWZKuwVGP8e7Ws-W4RHGDnL7hV0g4bURqVFuzxpu~1q2WkdCN~VW96CdGPvODJWs8B0Kz4r5-6jmXVwjFyDe1rziaMZZQPVjjMQ__');
@@ -74,6 +97,7 @@ body {
 .hero-content {
     z-index: 2;
     max-width: 800px;
+    padding-top: 20vh;
 
 }
 
@@ -199,7 +223,7 @@ body {
 
 .service-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.4rem;
     margin: 3rem 0;
 }
